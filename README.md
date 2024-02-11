@@ -18,3 +18,17 @@ By decreasing x_loss we try to make predicted (x0_x1_hat) values to be linear an
 By decreasing KLD loss we are trying to make the distribution of latent sample space to be standard normal distribution.
 
 The goal is to strike a balance between fitting the data well (reconstruction error) and regularizing the latent space (KLD term).
+
+# Problems Faced
+
+- Traning the model for large number of epochs(i.e. 100) then for a given values of y1 and y2 we start to get same values of x0_x1_hat every time we fed y1 and y2. Instead we should get different values of x0_x1_hat every time as we are sampling z from the Sampling Model.
+- 
+- There is trade off between x_loss and y_loss if we try to minimize one we can see effect on the other one also. When we try to decrease the x_loss the model start predicting the values that are almost linear and close to x0_x1 but sson the model starts to overfit.
+
+# Setup 
+![image](https://github.com/vaibhavprajapati-22/Two-Birds-One-Neural-Network-Challenge/assets/148644657/373081ba-0da0-4d00-ba8b-97115a923259)
+
+# References
+- https://towardsdatascience.com/understanding-conditional-variational-autoencoders-cd62b4f57bf8
+- https://medium.com/@sofeikov/implementing-conditional-variational-auto-encoders-cvae-from-scratch-29fcbb8cb08f
+- https://agustinus.kristia.de/techblog/2016/12/17/conditional-vae/

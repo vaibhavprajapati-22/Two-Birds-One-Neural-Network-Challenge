@@ -21,6 +21,8 @@ By decreasing KLD loss we are trying to make the distribution of latent sample s
 
 The goal is to strike a balance between fitting the data well (reconstruction error) and regularizing the latent space (KLD term).
 
+I have also tried to implement CGAN but i am not able to minimize the loss.
+
 # What is CVAE
 A CVAE is a type of VAE that incorporates a conditional variable into both the encoder and the decoder. The encoder takes the input data and the conditional variable and produces a latent representation that captures the relevant features of the data given the condition. The decoder takes the latent representation and the same conditional variable and generates an output that matches the data and the condition.
 

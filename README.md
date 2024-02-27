@@ -5,6 +5,8 @@ In this problem, it is required that the function vector X0 be a decreasing stra
 
 # Solution Description
 
+Model architecture and results can be found at : https://ubiquitous-horn-d1d.notion.site/Beginners-Hypothesis-2024-2y-1ec7e751b94d4733b84476fec5bfe1a9?pvs=25
+
 ![image](https://github.com/vaibhavprajapati-22/Two-Birds-One-Neural-Network-Challenge/assets/148644657/6413d38b-898d-4dad-a069-b42f80aa0da3)
 
 For this problem I have used CVAE Models to generate more samples for the given condition of y1 and y2. The Architecture of the model has been slightly changed from starter notebook provided by the DSG. According to the blog post https://agustinus.kristia.de/techblog/2016/12/17/conditional-vae/ the encoder model should input x0 and x1 as well the given y1 and y2 conditions during training. Sampling Model is same. Decoder Model have inputs for Z(Got from Sampling Model) and y1 and y2 for generating x0_hat and x1_hat.
@@ -22,6 +24,21 @@ By decreasing KLD loss we are trying to make the distribution of latent sample s
 The goal is to strike a balance between fitting the data well (reconstruction error) and regularizing the latent space (KLD term).
 
 I have also tried to implement CGAN but i am not able to minimize the loss.
+# Approach 1(CVAE)
+Result - 
+Tier 1:(data 1)<br>
+reconstruction _error: 0.8394938111305327<br>
+reconstruction_error1: 0.9097775220870972<br>
+linearity_ score0: 0.6474014839781754<br>
+linearity_score1: 0.5269936401342641<br>
+
+Tier 2:(data 2)<br>
+reconstruction _error: 0.9920759797096252<br>
+reconstruction_error1: 0.7499741911888123<br>
+linearity_score0: 0.1894369617582497<br>
+linearity_score1: 0.226967075032278060<br>
+
+# Approach 2(GAN)
 
 # What is CVAE
 A CVAE is a type of VAE that incorporates a conditional variable into both the encoder and the decoder. The encoder takes the input data and the conditional variable and produces a latent representation that captures the relevant features of the data given the condition. The decoder takes the latent representation and the same conditional variable and generates an output that matches the data and the condition.

@@ -39,6 +39,11 @@ linearity_score0: 0.1894369617582497<br>
 linearity_score1: 0.226967075032278060<br>
 
 # Approach 2(GAN)
+Tier 1:(data 1)<br>
+reconstruction_error0: 0.9893571138381958<br>
+reconstruction_error1: 1.0621347427368164<br>
+linearity_score0: 0.5464397975934853<br>
+linearity_score1: 0.548987767425317<br>
 
 # What is CVAE
 A CVAE is a type of VAE that incorporates a conditional variable into both the encoder and the decoder. The encoder takes the input data and the conditional variable and produces a latent representation that captures the relevant features of the data given the condition. The decoder takes the latent representation and the same conditional variable and generates an output that matches the data and the condition.
